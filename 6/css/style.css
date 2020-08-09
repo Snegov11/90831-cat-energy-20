@@ -55,6 +55,9 @@ html {
 .button:hover {
   background-color: #5eaa2f;
 }
+.button:active {
+  color: rgba(255, 255, 255, 0.7);
+}
 .button--grey {
   color: #444444;
   background-color: #f2f2f2;
@@ -62,20 +65,24 @@ html {
 .button--grey:hover {
   background-color: #ebebeb;
 }
-.site-list__item a {
+.button--grey:active {
+  color: rgba(68, 68, 68, 0.7);
+}
+.main-nav__list-item a {
   text-transform: uppercase;
   text-decoration: none;
   font: 500 20px/20px "Oswald", Arial, sans-serif;
+  color: black;
+}
+.page-header__logo:hover {
+  opacity: 0.8;
+}
+.page-header__logo:active {
+  opacity: 0.6;
 }
 .page-header__logo-img {
   width: 191px;
   height: 38px;
-}
-.page-header__logo-img:hover {
-  opacity: 0.8;
-}
-.page-header__logo-img:active {
-  opacity: 0.6;
 }
 @media (min-width: 768px) {
   .page-header__logo-img {
@@ -329,6 +336,11 @@ html {
     background: url("../img/icon-gift.svg") center 60px no-repeat, url("../img/gift-photo-desktop@1x.jpg") center center no-repeat;
     background-size: 80px 82px, cover;
   }
+}
+.card__name {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222222;
 }
 @media (min-width: 768px) {
   .card {
