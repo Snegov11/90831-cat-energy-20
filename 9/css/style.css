@@ -506,8 +506,14 @@ html {
 .before-after {
   background: #eaeaea;
 }
-.before-after__wrapper {
-  padding: 20px 0;
+.before-after__header {
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 33px;
+}
+.before-after__txt {
+  margin: 0;
+  padding-bottom: 25px;
 }
 .before-after__metrica {
   display: flex;
@@ -517,22 +523,23 @@ html {
 .before-after__metrica-item {
   height: 64px;
   width: 124px;
-  border: 1px solid #cdcdcd;
-  border-radius: 2px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   position: relative;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
 }
 .before-after__metrica-txt {
-  padding: 0 15px;
-  width: 60px;
-  text-transform: lowercase;
-  font: 12px/12px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
   display: block;
   position: absolute;
-  bottom: -15px;
+  bottom: -25px;
+  width: 60px;
+  padding: 0 15px;
+  text-transform: lowercase;
+  text-align: center;
+  font: 12px/12px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
   background: #eaeaea;
 }
 .before-after__metrica-digit {
@@ -540,16 +547,22 @@ html {
   text-transform: uppercase;
 }
 .before-after__metrica-price {
+  width: 100%;
+  padding-top: 34px;
   font: 14px/20px "Oswald", Arial, sans-serif;
   text-transform: uppercase;
-  width: 100%;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .before-after {
     background: linear-gradient(180deg, transparent 50%, #cdcdcd 50%);
   }
-  .before-after__wrapper {
-    padding: 30px 0;
+  .before-after__header {
+    padding-top: 43px;
+    padding-bottom: 63px;
+  }
+  .before-after__txt {
+    padding-bottom: 54px;
   }
   .before-after__metrica-item {
     width: 162px;
@@ -557,20 +570,42 @@ html {
     font-size: 30px;
     line-height: 37px;
   }
+  .before-after__metrica-digit {
+    font-size: 30px;
+    line-height: 37px;
+  }
   .before-after__metrica-txt {
-    background: white;
     width: auto;
-    bottom: -5px;
+    padding: 0 10px;
+    bottom: -20px;
     font-size: 14px;
     line-height: 14px;
+    background: white;
+  }
+  .before-after__metrica-price {
+    width: 300px;
+    padding-top: 0;
+    padding-left: 110px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
   }
 }
 @media (min-width: 1280px) {
   .before-after {
     background: linear-gradient(180deg, transparent 50%, #cdcdcd 50%);
   }
-  .before-after__wrapper {
-    padding: 110px 0;
+  .before-after__header {
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
+  .before-after__metrica-price {
+    padding: 0;
+    justify-content: space-between;
   }
 }
 .how-works__header {
@@ -1036,6 +1071,7 @@ html {
 }
 .form__select-programm-list-item {
   margin-bottom: 13px;
+  height: 40px;
 }
 .form__select-programm-list-item:last-child {
   margin-bottom: 0;
@@ -1063,12 +1099,18 @@ html {
   margin-left: 0;
   margin-bottom: 0;
 }
+.form__send {
+  padding-bottom: 32px;
+}
 .form__send-remark {
+  margin: 0;
+  padding-top: 20px;
   text-align: center;
 }
 @media (min-width: 768px) {
   .form__input {
     height: 52px;
+    margin-bottom: 20px;
   }
   .form__label,
   .form__check-label,
@@ -1108,9 +1150,14 @@ html {
   }
   .form__send-btn {
     height: 52px;
+    font-size: 20px;
   }
   .form__send-remark {
+    padding: 0;
     margin-left: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 1280px) {
@@ -1121,6 +1168,9 @@ html {
   }
   .form__cat-owner-list-item {
     width: 568px;
+  }
+  .form__cat-owner-list-item .form__input {
+    margin-bottom: 0;
   }
   .form__extra-list {
     flex-wrap: nowrap;
