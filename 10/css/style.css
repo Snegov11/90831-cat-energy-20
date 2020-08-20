@@ -44,12 +44,21 @@ html {
     width: 708px;
   }
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container.container--form {
+    width: 630px;
+    padding: 0 69px;
+  }
+}
 @media (min-width: 1280px) {
   html {
     font: 16px/24px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
     color: black;
   }
   .container {
+    width: 1220px;
+  }
+  .container.container--form {
     width: 1220px;
   }
   .container-column {
@@ -93,6 +102,7 @@ html {
 }
 .page-header__logo {
   height: 66px;
+  width: 205px;
   display: flex;
   align-items: center;
 }
@@ -112,6 +122,9 @@ html {
     justify-content: space-between;
     align-items: center;
     height: 100px;
+  }
+  .page-header__logo {
+    width: auto;
   }
   .page-header__logo-img {
     width: 174px;
@@ -233,8 +246,8 @@ html {
 }
 .main-nav__toggle {
   position: absolute;
-  right: 23px;
-  top: 23px;
+  right: 0;
+  top: 21px;
   display: block;
   width: 30px;
   height: 30px;
@@ -374,7 +387,6 @@ html {
 }
 @media (min-width: 768px) {
   .promo__wrapper {
-    padding-left: 90px;
     padding-bottom: 80px;
   }
   .promo__txt {
@@ -385,6 +397,7 @@ html {
     background: url("../img/index-can-tablet@1x.jpg") 50% 70% no-repeat;
   }
   .promo--index .promo__wrapper {
+    padding-left: 90px;
     min-height: 870px;
     text-align: left;
   }
@@ -435,7 +448,8 @@ html {
 }
 .contacts__location-map {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 @media (min-width: 768px) {
   .contacts__wrapper {
@@ -944,6 +958,8 @@ html {
     width: 248px;
   }
   .card--more {
+    margin-top: 80px;
+    height: 430px;
     background: none;
     border: 2px solid #f2f2f2;
   }
@@ -1167,15 +1183,15 @@ html {
   text-transform: uppercase;
   font: normal 16px/18px "Oswald", Arial, sans-serif;
   color: #222222;
-  background: url("../img/radiobutton.png") no-repeat left center;
-  padding: 10px;
+  background: url("../img/radiobutton-mobile.png") no-repeat left center;
+  padding: 7px;
   padding-left: 60px;
 }
 .form__radio-label:active {
   opacity: 0.3;
 }
 input[type="radio"]:checked + label.form__radio-label {
-  background-image: url("../img/radiobutton-active.png");
+  background-image: url("../img/radiobutton-active-mobile.png");
 }
 .form__input {
   flex-grow: 1;
@@ -1186,17 +1202,18 @@ input[type="radio"]:checked + label.form__radio-label {
   box-sizing: border-box;
   outline: none;
   border: solid 1px #cdcdcd;
+  font: normal 16px/18px "Oswald", Arial, sans-serif;
+  color: #444444;
+  text-transform: uppercase;
 }
 .form__input::-moz-placeholder {
   opacity: 1;
-  padding: 15px;
   text-transform: uppercase;
   font: normal 16px/18px "Oswald", Arial, sans-serif;
   color: #444444;
 }
 .form__input::placeholder {
   opacity: 1;
-  padding: 15px;
   text-transform: uppercase;
   font: normal 16px/18px "Oswald", Arial, sans-serif;
   color: #444444;
@@ -1208,19 +1225,19 @@ input[type="radio"]:checked + label.form__radio-label {
   border: 2px solid #ff8282;
 }
 .form__check-label {
-  align-items: baseline;
+  display: block;
   text-transform: uppercase;
   font: normal 16px/18px "Oswald", Arial, sans-serif;
   color: #444444;
-  background: url("../img/checkbox.png") no-repeat left center;
-  padding: 10px;
+  background: url("../img/checkbox-mobile.png") no-repeat left center;
+  padding: 7px;
   padding-left: 60px;
 }
 .form__check-label:active {
   opacity: 0.3;
 }
 input[type="checkbox"]:checked + label.form__check-label {
-  background-image: url("../img/checkbox-checked.png");
+  background-image: url("../img/checkbox-checked-mobile.png");
 }
 .form__cat-info,
 .form__cat-owner {
@@ -1238,16 +1255,15 @@ input[type="checkbox"]:checked + label.form__check-label {
 }
 .form__select-programm-list-item {
   margin-bottom: 13px;
-  height: 40px;
 }
 .form__select-programm-list-item:last-child {
   margin-bottom: 0;
 }
 .form__cat-owner-mail-input {
-  padding-right: 60px;
+  padding-right: 50px;
   background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 17 13' style='enable-background:new 0 0 17 13;' xml:space='preserve' fill = '%23222222'%3E%3Cpath d='M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: 98% center;
+  background-position: right 20px center;
   background-size: 20px 14px;
 }
 .form__cat-owner-mail-input:focus {
@@ -1260,7 +1276,7 @@ input[type="checkbox"]:checked + label.form__check-label {
   padding-right: 60px;
   background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' style='enable-background:new 0 0 20 20;' xml:space='preserve' fill='%23000000'%3E%3Cpath d='M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z'/%3E%3Cpath d='M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7 c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6 C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4 C7.8,20,8.1,19.7,8.1,19.4z'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
-  background-position: 98% center;
+  background-position: right 20px center;
   background-size: 20px 20px;
 }
 .form__cat-owner-tel-input:focus {
@@ -1304,6 +1320,16 @@ input[type="checkbox"]:checked + label.form__check-label {
   .form__input {
     height: 52px;
     margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .form__input::-moz-placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .form__input::placeholder {
+    font-size: 20px;
+    line-height: 30px;
   }
   .form__label,
   .form__check-label,
@@ -1318,6 +1344,12 @@ input[type="checkbox"]:checked + label.form__check-label {
   .form__select-programm-list {
     border: 1px solid #ebebeb;
     padding: 25px;
+  }
+  .form__radio-label {
+    background: url("../img/radiobutton.png") no-repeat left center;
+  }
+  input[type="radio"]:checked + label.form__radio-label {
+    background-image: url("../img/radiobutton-active.png");
   }
   .form__header {
     font: normal 36px/36px "Oswald", Arial, sans-serif;
@@ -1336,6 +1368,12 @@ input[type="checkbox"]:checked + label.form__check-label {
   .form__extra-list-item:nth-child(odd) {
     flex-basis: 50%;
     margin-bottom: 0;
+  }
+  .form__check-label {
+    background: url("../img/checkbox.png") no-repeat left center;
+  }
+  input[type="checkbox"]:checked + label.form__check-label {
+    background-image: url("../img/checkbox-checked.png");
   }
   .form__send {
     padding-bottom: 70px;
